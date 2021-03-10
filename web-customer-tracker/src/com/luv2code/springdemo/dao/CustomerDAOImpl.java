@@ -14,11 +14,11 @@ import com.luv2code.springdemo.entity.Customer;
 @Repository
 public class CustomerDAOImpl implements CustomerDAO {
 
+	//Inject the session factory
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	@Override
-	@Transactional
 	public List<Customer> getCustomers() {
 
 		//get the current hibernate session
